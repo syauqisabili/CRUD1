@@ -8,10 +8,9 @@
           <thead>
             <tr>
                 <th style="width: 10px">No</th>
-                <th>Judul</th>
-                <th>Pertanyaan</th>
+                <th>Judul Pertanyaan</th>
                 <th>Tanggal Dibuat</th>
-                <th>Actions</th>
+                <th>Action</th>
                 <th>Result</th>
             </tr>
           </thead>
@@ -20,7 +19,6 @@
               <tr>
                   <td> {{ $key+1 }} </td>
                   <td> {{ $item->judul }} </td>
-                  <td> {{ $item->isi }} </td>
                   <td> {{ $item->created_at }} </td>
                   <td> <a href="/pertanyaan/{{$item->id}}" class="btn btn-info">Show</a> </td>
                   <td> <a href="/jawaban/{{$item->id}}" class="btn btn-secondary">Jawaban</a> </td>
