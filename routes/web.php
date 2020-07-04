@@ -14,3 +14,4 @@
 Route::get('/pertanyaan/create', 'PertanyaanController@create'); //Membuat pertanyaan baru
 Route::get('/pertanyaan', 'PertanyaanController@index'); //Menampilkan Pertanyaan
 Route::post('/pertanyaan', 'PertanyaanController@store'); //Menyimpan pertanyaan
+Route::get('/pertanyaan/{id}', 'PertanyaanController@show'); //show Pertanyaan berdasarkan id

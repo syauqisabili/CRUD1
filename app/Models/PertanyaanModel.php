@@ -17,4 +17,10 @@ class PertanyaanModel {
         $new_item = DB::table('pertanyaan')->insert($data);
         return $new_item;
     }
+
+    public static function findById($id){
+        $item = DB::table('pertanyaan')->where('id', '=', $id)->first();
+
+        return $item;
+    }
 }
