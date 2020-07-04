@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class PertanyaanModel {
 
@@ -12,6 +13,8 @@ class PertanyaanModel {
     //array associative [key][value]
     public static function insertData($data){
         unset($data["_token"]);
-        return DB::table('pertanyaan')->insert($data);
+        $data['created_at'] = Carbon::now('Y-m-d');
+        $new_item = DB::table('pertanyaan')->insert($data);
+        return $new_item;
     }
 }
