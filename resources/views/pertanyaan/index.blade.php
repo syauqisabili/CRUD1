@@ -12,6 +12,7 @@
                 <th>Pertanyaan</th>
                 <th>Tanggal Dibuat</th>
                 <th>Actions</th>
+                <th>Result</th>
             </tr>
           </thead>
           <tbody>
@@ -22,6 +23,7 @@
                   <td> {{ $item->isi }} </td>
                   <td> {{ $item->created_at }} </td>
                   <td> <a href="/pertanyaan/{{$item->id}}" class="btn btn-info">Show</a> </td>
+                  <td> <a href="/jawaban/{{$item->id}}" class="btn btn-secondary">Jawaban</a> </td>
               </tr>
               @endforeach
           </tbody>

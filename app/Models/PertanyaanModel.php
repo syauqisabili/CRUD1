@@ -19,8 +19,8 @@ class PertanyaanModel {
     }
 
     public static function findById($id){
-        $item = DB::table('pertanyaan')->where('id', '=', $id)->first();
 
+        $item = DB::table('pertanyaan')->where('id', '=', $id)->first();
         return $item;
     }
 }
